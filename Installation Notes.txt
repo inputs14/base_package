@@ -1,0 +1,8 @@
+1. Install IDE (Eg: Visual Studio Code).
+2. Install Git.
+3. Install Node from nodejs.com
+4. Clone the Repository.
+5. Open project folder (UI_Application) in IDE.
+6. Go to IDE commandline and give command "npm install".
+7. Now give command "npm start".
+8. Team Input App runs...
