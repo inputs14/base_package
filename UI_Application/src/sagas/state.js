@@ -1,0 +1,1 @@
+export const getNumber = (state) => state.counter.count

@@ -1,11 +1,11 @@
-import { INCREMENT_COUNT, DECREMENT_COUNT } from '../actionTypes/counterActiontypes';
+import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actionTypes/counterActiontypes';
 
 const incrementCount = () => ({
-  type: INCREMENT_COUNT,
+  type: INCREMENT_COUNTER,
 })
 
 const decrementCount = () => ({
-    type: DECREMENT_COUNT,
+    type: DECREMENT_COUNTER,
   })
 
 export default {incrementCount, decrementCount};
