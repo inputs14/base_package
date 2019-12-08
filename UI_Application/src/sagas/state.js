@@ -1,1 +1,1 @@
-export const getNumber = (state) => state.counter.count
+export const getNumber = (store) => store.counter.count

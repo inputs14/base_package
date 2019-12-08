@@ -8,7 +8,7 @@ export default (state = {...initialState}, action) => {
      case INCREMENT_COUNT:
       return {
         ...state,
-       count: state.count + 1,
+       count: action.payload.count,
       }
       case DECREMENT_COUNT:
         return {
