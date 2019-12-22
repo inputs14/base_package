@@ -7,7 +7,7 @@ import Counter from './components/Counter/Counter.jsx';
 import configureStore from './store';
 
 const App = () => {
-
+  
   // const propFunction = (value) => {console.log('In INdex', value)}
   // const text = "Enter the amount to pay";
   return <div><h1>Welcome Team Inputs...</h1>

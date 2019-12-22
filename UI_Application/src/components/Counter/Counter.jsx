@@ -2,34 +2,38 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import counterActions from '../../actions/counterActions';
+import LifeCycle from '../LifeCycle.jsx';
 
 class Counter extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super();
-    // this.state = {
-
-    // };
   }
 
-    render() {
-
-      return (
-        <div>
-            Current Product Count: {this.props.count}
-            <button onClick={this.props.actions.incrementCount}>+</button>
-            <button onClick={this.props.actions.decrementCount}>-</button>
-        </div>
-      );
+  renderLifeCycle() {
+    if (this.props.count > 0) {
+      return (<LifeCycle value={this.props.count} />);
     }
   }
 
-  const mapStateToProps = store => ({
-    count: store.counter.count
-   })
+  render() {
+    return (
+      <div>
+        Current Product Count: {this.props.count}
+        <button onClick={this.props.actions.incrementCount}>+</button>
+        <button onClick={this.props.actions.decrementCount}>-</button>
+        {this.renderLifeCycle()}
+      </div>
+    );
+  }
+}
 
-    const mapDispatchToProps = dispatch => ({
-        actions: bindActionCreators(counterActions, dispatch)
-   })
+const mapStateToProps = store => ({
+  count: store.counter.count
+})
 
-  export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(counterActions, dispatch)
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
